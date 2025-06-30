@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import your components
+import Navbar from './Components/Navbar.js';
+import Home from './Components/Home/Home.js';
+import Footer from './Components/Footer.js';
+
+
+// Import your hero image from assets
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        {/* Navigation Bar - will be on all pages */}
+        <Navbar />
+        
+        {/* Routes for different pages */}
+        <Routes>
+          {/* Home Page Route */}
+          <Route 
+            path="/" 
+            element={
+              <>
+                <Home  />
+                <Footer />
+              </>
+            } 
+          />
+          
+      
+          
+          {/* Add more routes here as needed */}
+          {/* 
+          <Route path="/cart" element={<><CartPage /><Footer /></>} />
+          <Route path="/shop" element={<><ShopPage /><Footer /></>} />
+          */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
