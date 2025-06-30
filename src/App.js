@@ -7,7 +7,8 @@ import Home from './Components/Home/Home.js';
 import Footer from './Components/Footer.js';
 import Main from './Components/Calender/Calender.js';
 import Projects from './Components/Projects/Projects.js';
-import TaskManager from './Components/tasks/TaskManager.js'; // Updated import
+import TaskManager from './Components/tasks/TaskManager.js';
+import { Login, Register } from './Components/Auth/Auth.js'; // New import for auth components
 
 function App() {
   return (
@@ -27,14 +28,12 @@ function App() {
           {/* Projects Route */}
           <Route path="/TaskFlow" element={<Projects />} />
           
-          {/* Task Manager Route - Fixed component name */}
+          {/* Task Manager Route */}
           <Route path="/TaskManager" element={<TaskManager />} />
           
-          {/* Add more routes here as needed */}
-          {/*
+          {/* Authentication Routes */}
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          */}
+          <Route path="/signup" element={<Register />} />
         </Routes>
         
         {/* Footer - will be on all pages */}
