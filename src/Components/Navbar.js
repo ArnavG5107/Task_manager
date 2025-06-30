@@ -51,15 +51,7 @@ export default function Navbar() {
             </button>
             
             <button
-              onClick={() => handleNavigation('/dashboard')}
-              className="text-blue-200 hover:text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-200 hover:bg-blue-800/30 hover:shadow-lg hover:shadow-blue-500/10"
-            >
-              <BarChart3 className="w-4 h-4 mr-2" />
-              Dashboard
-            </button>
-            
-            <button
-              onClick={() => handleNavigation('/projects')}
+              onClick={() => handleNavigation('/TaskFlow')}
               className="text-blue-200 hover:text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-200 hover:bg-blue-800/30 hover:shadow-lg hover:shadow-blue-500/10"
             >
               <FolderOpen className="w-4 h-4 mr-2" />
