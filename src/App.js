@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar.js';
 import Home from './Components/Home/Home.js';
 import Footer from './Components/Footer.js';
+import Main from './Components/Calender/Calender.js'; // Import
 
 
 // Import your hero image from assets
@@ -28,7 +29,15 @@ function App() {
               </>
             } 
           />
-          
+          <Route 
+            path="/main" 
+            element={
+              <>
+                <Main />
+                <Footer />
+              </>
+            } 
+          />
       
           
           {/* Add more routes here as needed */}

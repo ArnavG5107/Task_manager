@@ -1,17 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, CheckSquare, BarChart3, FolderOpen, User } from 'lucide-react';
 
 export default function Navbar() {
-  // Function to handle navigation (you can integrate with your router)
+  const navigate = useNavigate();
+
+  // Function to handle navigation using React Router
   const handleNavigation = (path) => {
-    console.log(`Navigating to: ${path}`);
-    // Replace with your actual navigation logic
+    navigate(path);
   };
 
   // Function to handle logo click (go to home)
   const handleLogoClick = () => {
-    console.log('Navigating to home');
-    // Replace with your actual navigation logic
+    navigate('/');
   };
 
   return (
@@ -34,7 +35,7 @@ export default function Navbar() {
           {/* Center: Navigation Menu */}
           <div className="hidden md:flex space-x-1">
             <button
-              onClick={() => handleNavigation('/calendar')}
+              onClick={() => handleNavigation('/main')}
               className="text-blue-200 hover:text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-200 hover:bg-blue-800/30 hover:shadow-lg hover:shadow-blue-500/10"
             >
               <Calendar className="w-4 h-4 mr-2" />
