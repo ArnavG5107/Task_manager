@@ -43,7 +43,7 @@ export default function Navbar() {
             </button>
             
             <button
-              onClick={() => handleNavigation('/my-tasks')}
+              onClick={() => handleNavigation('/TaskManager')}
               className="text-blue-200 hover:text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-200 hover:bg-blue-800/30 hover:shadow-lg hover:shadow-blue-500/10"
             >
               <CheckSquare className="w-4 h-4 mr-2" />

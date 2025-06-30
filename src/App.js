@@ -7,6 +7,7 @@ import Home from './Components/Home/Home.js';
 import Footer from './Components/Footer.js';
 import Main from './Components/Calender/Calender.js';
 import Projects from './Components/Projects/Projects.js';
+import TaskManager from './Components/tasks/TaskManager.js'; // Updated import
 
 function App() {
   return (
@@ -23,13 +24,14 @@ function App() {
           {/* Calendar/Main Route */}
           <Route path="/main" element={<Main />} />
           
-          {/* Projects Route - Fixed to match navbar navigation */}
+          {/* Projects Route */}
           <Route path="/TaskFlow" element={<Projects />} />
           
+          {/* Task Manager Route - Fixed component name */}
+          <Route path="/TaskManager" element={<TaskManager />} />
+          
           {/* Add more routes here as needed */}
-          {/* 
-          <Route path="/my-tasks" element={<MyTasks />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/*
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           */}
